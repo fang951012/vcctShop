@@ -13,6 +13,7 @@ import infiniteScroll from 'vue-infinite-scroll'
 import 'mint-ui/lib/style.css'
 import Vant from 'vant';
 import 'vant/lib/index.css';
+
 Vue.use(Vant);
 promise.polyfill();
 Vue.use(Mint)
@@ -20,6 +21,7 @@ Vue.use(infiniteScroll)
 Vue.config.productionTip = false
 Vue.prototype.$moment = moment
 Vue.prototype.$http=axios;
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
