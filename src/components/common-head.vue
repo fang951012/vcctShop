@@ -10,6 +10,8 @@
       <div class="menu">
         <img src="../assets/img/2.png"/>
       </div>
+
+      <van-button type="default">默认按钮</van-button>
     </header>
   </div>
 </template>
@@ -27,7 +29,6 @@ export default {
 			var t=this;
 			t.$emit("right-click");
 		},
-
     //返回按钮
     ret:function(){
       var t=this;
@@ -66,10 +67,16 @@ export default {
    margin:.17rem 0 0 .2rem;
  }
  header .search input{
-   border:0;
-   background:rgba(232,230,230,1);
-   margin:.17rem 0 0 .2rem;
+   border: 0;
+   background: #e8e6e6;
+   margin: .17rem 0 0 .2rem;
    letter-spacing: .02rem;
+   float: left;
+   height: .3rem;
+   width: 4rem;
+ }
+ header .search input::-webkit-input-placeholder{
+   color: #ADD8E6;
  }
  header .search input::-webkit-input-placeholder {
    color: rgba(156,156,156,1);

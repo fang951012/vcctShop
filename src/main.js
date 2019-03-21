@@ -11,6 +11,9 @@ import Mint from 'mint-ui'
 import moment from 'moment'
 import infiniteScroll from 'vue-infinite-scroll'
 import 'mint-ui/lib/style.css'
+import Vant from 'vant';
+import 'vant/lib/index.css';
+Vue.use(Vant);
 promise.polyfill();
 Vue.use(Mint)
 Vue.use(infiniteScroll)
