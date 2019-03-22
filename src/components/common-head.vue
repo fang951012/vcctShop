@@ -20,8 +20,9 @@
       </div>
     </header>
     <van-cell  >
-      <img slot="icon" src="../assets/img/home/Location.png" class="location-icon" />
+
       <span slot="title" class="location-title">
+           <img  src="../assets/img/home/Location.png" class="location-icon" />
         陆家嘴商务广场
       <img src="../assets/img/home/rightArrow.png" class="location-right-icon" /></span>
     </van-cell>
@@ -137,39 +138,40 @@ export default {
    overflow: hidden;
  }
   .location-icon{
-    width: 12px;
-    height: 12px;
-    margin-top: 6px;
+      width: 0.26rem;
+      height: 0.26rem;
+      margin-top: 0.1rem;
+
   }
   .location-right-icon{
-    width: 8px;
-    height: 8px;
-    margin-top: 2px;
+      width: .2rem;
+      height: .2rem;
   }
   .location-title{
+      font-size: 0.3rem;
     margin-left: 4px;
   }
  .van-collapse-item__content {
    color: #ffffff;
    padding: 10px;
-   font-size: 13px;
+     font-size: 0.3rem;
    line-height: 2;
    background-color: #212121
  }
  .van-collapse-item__wrapper {
-   text-align: center;
-   overflow: hidden;
-   will-change: height;
-   -webkit-transition: height 0.3s ease-in-out;
-   -o-transition: height 0.3s ease-in-out;
-   transition: height 0.3s ease-in-out;
-   float: right;
-   margin-right: 100px;
-   width: 100px;
-   background-color: rebeccapurple;
-   position: absolute;
-   z-index: 999;
-   margin-left: -80px
+     text-align: center;
+     overflow: hidden;
+     will-change: height;
+     -webkit-transition: height 0.3s ease-in-out;
+     -o-transition: height 0.3s ease-in-out;
+     transition: height 0.3s ease-in-out;
+     float: right;
+     margin-right: 100px;
+     width: 2rem;
+     background-color: rebeccapurple;
+     position: absolute;
+     z-index: 999;
+     margin-left: -1.5rem;
  }
   .van-collapse-item {
     .van-cell {
