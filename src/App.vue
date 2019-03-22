@@ -11,5 +11,12 @@ export default {
 </script>
 
 <style type="less">
-
+#app{
+    background-color: white;
+    bottom: 0px;
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    overflow-x: hidden;
+}
 </style>

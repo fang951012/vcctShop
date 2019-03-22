@@ -5,13 +5,15 @@
       <div class="mall">商城</div>
       <div class="search">
         <img src="../assets/img/1.png"/>
-        <input type="text" placeholder="输入商户名称">
+        <input type="search" placeholder="输入商户名称">
       </div>
-      <div class="menu">
-        <img src="../assets/img/2.png"/>
-      </div>
-
-      <van-button type="default">默认按钮</van-button>
+      <img src="../assets/img/menu.png" class="menuSelect" @click="setMenuStatus"/>
+      <van-popup v-model="menuShow" position="right" :overlay="false">
+          <van-cell title="购买优惠券"  url="//youzan.github.io/vant/mobile.html" />
+          <van-cell title="我的优惠券"  url="//youzan.github.io/vant/mobile.html" />
+          <van-cell title="我的订单"  url="//youzan.github.io/vant/mobile.html" />
+          <van-cell title="地址管理" url="//youzan.github.io/vant/mobile.html" />
+      </van-popup>
     </header>
   </div>
 </template>
@@ -21,29 +23,35 @@ export default {
   name:"common-head",
   data() {
     return {
-
+      menuShow:false,
     }
   },
   methods:{
-		right(){
-			var t=this;
+    right(){
+          var t=this;
 			t.$emit("right-click");
-		},
+    },
     //返回按钮
     ret:function(){
       var t=this;
       window.history.length > 1? t.$router.go(-1): t.$router.push('/');
     },
+    //菜单按钮状态
+    setMenuStatus(){
+        this.menuShow = !this.menuShow;
+    }
   }
 }
 </script>
 <style lang="less">
  #head{
    height: .9rem;
+   background-color: white;
+
  }
  header{
    width: 95%;
-   margin:.2rem auto 0;
+   padding: 0.2rem;
    height:.64rem;
    display: flex;
    justify-content: space-between;
@@ -74,6 +82,7 @@ export default {
    float: left;
    height: .3rem;
    width: 4rem;
+   font-size: 16px;
  }
  header .search input::-webkit-input-placeholder{
    color: #ADD8E6;
@@ -82,13 +91,18 @@ export default {
    color: rgba(156,156,156,1);
    font-size: .24rem;
  }
- header .menu{
+ header .menuSelect{
    width: .48rem;
    height: .36rem;
    margin-top:.14rem;
  }
- header .menu img{
-   height: 100%;
-   width: 100%;
+ .van-popup--right {
+   top: 19%;
+   right: 12px;
+   bottom: auto;
+   left: auto;
+   -webkit-transform: translate3d(0, -50%, 0);
+   transform: translate3d(0, -50%, 0);
+   border: 1px solid #e8e6e6;
  }
 </style>
