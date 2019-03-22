@@ -383,7 +383,6 @@
   height: 0;
  }
  #exchange {
-
   .cont::-webkit-scrollbar {
    display:none;
   }
