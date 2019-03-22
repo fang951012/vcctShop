@@ -7,18 +7,24 @@
         <img src="../assets/img/1.png"/>
         <input type="search" placeholder="输入商户名称">
       </div>
-      <img src="../assets/img/menu.png" class="menuSelect" @click="setMenuStatus"/>
-      <van-popup v-model="menuShow" position="right" :overlay="false">
-          <van-cell title="购买优惠券"  url="#" />
-          <van-cell title="我的优惠券"  url="#" />
-          <van-cell title="我的订单"  url="#" />
-          <van-cell title="地址管理" url="#" />
-      </van-popup>
+      <van-collapse v-model="activeNames" style="width: 100px;position: absolute;    margin-left: 89%;">
+        <van-collapse-item name="1">
+          <img slot="right-icon"  src="../assets/img/menu.png"  class="menuSelect" >
+          <div>购买优惠券</div>
+          <div>我的优惠券</div>
+          <div>我的订单</div>
+          <div>地址管理</div>
+        </van-collapse-item>
+      </van-collapse>
       <div>
-        <!--<van-cell title="单元格" icon="location-o" />-->
       </div>
-
     </header>
+    <van-cell  >
+      <img slot="icon" src="../assets/img/home/Location.png" class="location-icon" />
+      <span slot="title" class="location-title">
+        陆家嘴商务广场
+      <img src="../assets/img/home/rightArrow.png" class="location-right-icon" /></span>
+    </van-cell>
   </div>
 </template>
 
@@ -28,6 +34,7 @@ export default {
   data() {
     return {
       menuShow:false,
+      activeNames:[1],
     }
   },
   methods:{
@@ -49,7 +56,7 @@ export default {
 </script>
 <style lang="less">
  #head{
-   height: .9rem;
+   height: 1.6rem;
    background-color: white;
 
  }
@@ -100,6 +107,11 @@ export default {
    height: .36rem;
    margin-top:.14rem;
  }
+ .menuSelect{
+   width: .48rem;
+   height: .36rem;
+   margin-top:.14rem;
+ }
  .van-popup--right {
    top: 19%;
    right: 12px;
@@ -109,4 +121,61 @@ export default {
    transform: translate3d(0, -50%, 0);
    border: 1px solid #e8e6e6;
  }
+ .van-cell {
+   width: 100%;
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   padding: 0 0 0 0.2rem;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+   line-height: 24px;
+   position: relative;
+   background-color: #fff;
+   color: #323233;
+   font-size: 14px;
+   overflow: hidden;
+ }
+  .location-icon{
+    width: 12px;
+    height: 12px;
+    margin-top: 6px;
+  }
+  .location-right-icon{
+    width: 8px;
+    height: 8px;
+    margin-top: 2px;
+  }
+  .location-title{
+    margin-left: 4px;
+  }
+ .van-collapse-item__content {
+   color: #ffffff;
+   padding: 10px;
+   font-size: 13px;
+   line-height: 2;
+   background-color: #212121
+ }
+ .van-collapse-item__wrapper {
+   text-align: center;
+   overflow: hidden;
+   will-change: height;
+   -webkit-transition: height 0.3s ease-in-out;
+   -o-transition: height 0.3s ease-in-out;
+   transition: height 0.3s ease-in-out;
+   float: right;
+   margin-right: 100px;
+   width: 100px;
+   background-color: rebeccapurple;
+   position: absolute;
+   z-index: 999;
+   margin-left: -80px
+ }
+  .van-collapse-item {
+    .van-cell {
+
+      padding: 0 0 0 0;
+
+    }
+  }
 </style>

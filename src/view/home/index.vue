@@ -516,7 +516,6 @@
     }
    }
   }
-
  }
  .ellipsis{
   overflow:hidden;
@@ -529,7 +528,7 @@
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  line-height: 0.5rem;
+  line-height: 26px;
  }
  .van-card__thumb {
   position: relative;
