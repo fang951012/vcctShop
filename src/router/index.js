@@ -6,60 +6,59 @@ const router=new Router({
   routes: [
     {
       //首页
-      path: '/',
+      path:'/',
       component: resolve=>require(["../view/home/index"],resolve),
     },
     {
       //服务详情
-      path: '/',
+      path: '/home/serverInformation',
       component: resolve=>require(["../view/home/serverInformation"],resolve),
     },
     {
       //商铺详情
-      path: '/',
+      path: '/home/shopInformation',
       component: resolve=>require(["../view/home/shopInformation"],resolve),
     },
     {
       //购买优惠券
-      path: '/',
+      path: '/buyCoupon/index',
       component: resolve=>require(["../view/buyCoupon/index"],resolve),
     },
     {
       //我的优惠券
-      path: '/',
+      path: '/myCoupon/index',
       component: resolve=>require(["../view/myCoupon/index"],resolve),
     },
     {
       //我的优惠券使用记录
-      path: '/',
+      path: '/myCoupon/recordList',
       component: resolve=>require(["../view/myCoupon/recordList"],resolve),
     },
     {
       //我的订单
-      path: '/',
+      path: '/order/index',
       component: resolve=>require(["../view/order/index"],resolve),
     },
     {
       //我的订单详情
-      path: '/',
+      path: '/order/details',
       component: resolve=>require(["../view/order/details"],resolve),
     },
     {
       //支付
-      path: '/',
+      path: '/payment/index',
       component: resolve=>require(["../view/payment/index"],resolve),
     },
     {
       //地址
-      path: '/',
+      path: '/address/index',
       component: resolve=>require(["../view/address/index"],resolve),
     },
     {
       //地址编辑
-      path: '/',
+      path: '/address/edit',
       component: resolve=>require(["../view/address/edit"],resolve),
     },
-
   ]
 })
 // const router=new Router({
