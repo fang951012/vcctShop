@@ -9,11 +9,15 @@
       </div>
       <img src="../assets/img/menu.png" class="menuSelect" @click="setMenuStatus"/>
       <van-popup v-model="menuShow" position="right" :overlay="false">
-          <van-cell title="购买优惠券"  url="//youzan.github.io/vant/mobile.html" />
-          <van-cell title="我的优惠券"  url="//youzan.github.io/vant/mobile.html" />
-          <van-cell title="我的订单"  url="//youzan.github.io/vant/mobile.html" />
-          <van-cell title="地址管理" url="//youzan.github.io/vant/mobile.html" />
+          <van-cell title="购买优惠券"  url="#" />
+          <van-cell title="我的优惠券"  url="#" />
+          <van-cell title="我的订单"  url="#" />
+          <van-cell title="地址管理" url="#" />
       </van-popup>
+      <div>
+        <!--<van-cell title="单元格" icon="location-o" />-->
+      </div>
+
     </header>
   </div>
 </template>

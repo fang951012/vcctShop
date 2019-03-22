@@ -87,7 +87,37 @@
      rightTitle:"兑换记录",
     },
     aReal:[],//实物奖品列表
-    aVirtual:[],//虚拟奖品奖励
+    aVirtual:[
+    {
+     goods_id:1,
+     stocks:0,
+     thum_img:common1,
+     hot:1,
+     seller_price:800,
+     title:''
+    },
+     {
+      goods_id:1,
+      stocks:1,
+      thum_img:common2,
+      hot:1,
+      seller_price:800,
+     },
+     {
+      goods_id:1,
+      stocks:1,
+      thum_img:common2,
+      hot:1,
+      seller_price:800,
+     },
+     {
+      goods_id:1,
+      stocks:1,
+      thum_img:common1,
+      hot:0,
+      seller_price:800,
+     },
+    ],//虚拟奖品奖励
     page:0,
     total:0,
     type:3,
@@ -104,10 +134,10 @@
    }
   },
   created(){
-   var t=this
-   t.judgeApp()
-   t.login()
-   t.loadMore()
+   // var t=this
+   // t.judgeApp()
+   // t.login()
+   // t.loadMore()
   },
   methods:{
    judgeApp(){
