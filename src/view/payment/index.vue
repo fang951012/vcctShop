@@ -19,32 +19,34 @@
          <!--支付方式-->
          <div class="payment-method">
             <div>支付方式</div>
-             <div class="payment-menu wechat">
-                 <div class="payment-menu-information">
-                     <img src="../../assets/img/payment/WeChat.png" class="payment-icon-wechat"/>
-                     <span>微信支付</span>
+             <div v-for="(item,i) in data.payType">
+                 <div v-if="item=='3'" :class="i==0?'payment-menu-first':'payment-menu'">
+                     <div class="payment-menu-information">
+                         <img src="../../assets/img/payment/WeChat.png" class="payment-icon-wechat"/>
+                         <span>微信支付{{i}}</span>
+                     </div>
+                     <img src="../../assets/img/payment/pitchOn.png" class="payment-status"/>
                  </div>
-                 <img src="../../assets/img/payment/pitchOn.png" class="payment-status"/>
-             </div>
-             <div class="payment-menu">
-                 <div class="payment-menu-information">
-                     <img src="../../assets/img/payment/zhifubao.png" class="payment-icon-zhifubao"/>
-                     <span>支付宝支付</span>
+                 <div v-if="item=='2'" :class="i==0?'payment-menu-first':'payment-menu'">
+                     <div class="payment-menu-information">
+                         <img src="../../assets/img/payment/zhifubao.png" class="payment-icon-zhifubao"/>
+                         <span>支付宝支付{{i}}</span>
+                     </div>
+                     <img src="../../assets/img/payment/pitchOn.png" class="payment-status"/>
                  </div>
-                 <img src="../../assets/img/payment/pitchOn.png" class="payment-status"/>
-             </div>
-             <div class="payment-menu">
-                 <div class="payment-menu-information">
-                     <img src="../../assets/img/payment/VCCT.png" class="payment-icon-vcct"/>
-                     <span>VCCT支付</span>
+                 <div v-if="item=='1'"  :class="i==0?'payment-menu-first':'payment-menu'">
+                     <div class="payment-menu-information">
+                         <img src="../../assets/img/payment/VCCT.png" class="payment-icon-vcct"/>
+                         <span>VCCT支付{{i}}</span>
+                     </div>
+                     <img src="../../assets/img/payment/pitchOn.png" class="payment-status"/>
                  </div>
-                 <img src="../../assets/img/payment/pitchOn.png" class="payment-status"/>
              </div>
+
          </div>
          <!--去支付-->
          <div class="payment-submit">支付</div>
      </div>
-
  </div>
 </template>
 
@@ -95,6 +97,15 @@
          margin-top: 0.87rem;
          line-height: 0.52rem;
          position: relative;
+         .payment-menu-first{
+             display: flex;
+             justify-content: space-between;
+             letter-spacing: 0.1rem;
+             width: 100%;
+             clear: both;
+             margin-top: 0.3rem;
+             align-items: center;
+         }
          .payment-menu{
              display: flex;
              justify-content: space-between;
