@@ -21,31 +21,26 @@
              </div>
          </div>
      </van-list>
-
-     <van-dialog
-             v-model="dialogShow"
-             :lazy-render="false"
-             :before-close="beforeClose">
-           <div class="dialog-content">
-
-           </div>
-         <!--<van-field-->
-                 <!--v-model="username"-->
-                 <!--:label="$t('username')"-->
-                 <!--:placeholder="$t('usernamePlaceholder')"-->
-         <!--/>-->
-         <!--<van-field-->
-                 <!--v-model="password"-->
-                 <!--type="password"-->
-                 <!--:label="$t('password')"-->
-                 <!--:placeholder="$t('passwordPlaceholder')"-->
-         <!--/>-->
-     </van-dialog>
+     <van-popup v-model="dialogShow">
+         <div class="dialog-content">
+             <div class="shop-name">商户名称</div>
+             <star-rate ref="starRate" :value="form.star" />
+             <div class="titleRate">商户服务评价</div>
+             <textarea class="rate-textarea" rows="3" maxlength="151" v-model="form.desc"></textarea>
+             <div class="rate-submit" @click="submitRate">
+                 <span>提交</span>
+             </div>
+         </div>
+     </van-popup>
  </div>
 </template>
 
 <script>
+    import starRate from '../../components/starsRate'
     export default {
+        components:{
+            'star-rate':starRate
+        },
         data() {
             return {
                 dataList: [
@@ -65,8 +60,27 @@
                     },
                 ],
                 loading: false,
-                finished: false,
+                finished: true,
                 dialogShow:false,
+                form: {
+                    action:"",	//是	string	smGoodsEvaluation
+                    goodsId:"",	//是	int	服务id
+                    star:"",	//否	string	评价星级
+                    desc:"",//	否	string	评价内容
+                    orderId:"",	//否	bigint	订单id
+                }
+            }
+        },
+        watch:{   //watch()监听某个值（双向绑定）的变化，从而达到change事件监听的效果
+            form:{
+                handler:function(old){
+                    let _this = this;
+                    if (_this.form.desc.length=="151"){
+                        this.$notify('商户服务评价字数超出限制');
+                        _this.form.sogoName=old.sogoName.substr(0, 150);
+                    }
+                },
+                deep:true
             }
         },
         methods:{
@@ -79,9 +93,10 @@
             goEvaluate(){
                 this.dialogShow=true;
             },
-            beforeClose(){
-
+            submitRate(){
+                this.dialogShow=false;
             }
+
 
         }
     }
@@ -90,17 +105,10 @@
 <style lang="less">
     .recordList{
         .van-cell__label {
-            color: #969799;
-            font-size: 12px;
-            margin-top: 3px;
-            line-height: 18px;
-            width: 5.15rem;
+            width: 5.6rem;
         }
         .title{
             font-size: 0.24rem;
-        }
-        .van-cell__label{
-            font-size: 0.15rem;
         }
         .price{
             color: rgba(245,161,24,1);
@@ -118,9 +126,39 @@
             font-size: 0.18rem;
             color: rgba(103,103,103,1);
         }
+        .van-popup {
+            border-radius: 0.1rem;
+        }
         .dialog-content{
-            width: 80%;
-            height: 30%;
+            width:5.93rem;
+            padding: 5%;
+            text-align: center;
+            height: 5.07rem;
+            font-size: 0.24rem;
+            line-height: 0.64rem;
+            .shop-name{
+
+            }
+            .rate-textarea{
+                width: 5.12rem;
+                font-size: 0.3rem;
+            }
+            .titleRate{
+                color: rgba(103,103,103,1);
+                font-size: 0.24rem;
+            }
+            .rate-submit{
+                width:3.33rem ;
+                height: 0.73rem;
+                background-color: rgba(245,161,24,1);
+                text-align: center;
+                border-radius: 0.1rem;
+                margin: 0 auto;
+                line-height:  0.73rem;;
+                span{
+                    color: white;
+                }
+            }
         }
 
     }
