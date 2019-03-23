@@ -21,7 +21,7 @@ const router=new Router({
     },
     {
       //购买优惠券
-      path: '/buyCoupon/index',
+      path: '/',
       component: resolve=>require(["../view/buyCoupon/index"],resolve),
     },
     {
@@ -66,13 +66,13 @@ const router=new Router({
     },
     {
       //填写订单
-      path: '/',
+      path: '/writeOrder/index',
       component: resolve=>require(["../view/writeOrder/index"],resolve),
     },
     {
-      //商品
-      path: '/',
-      component: resolve=>require(["../view/writeOrder/index"],resolve),
+      //商品详情
+      path: '/goodsDetail/index',
+      component: resolve=>require(["../view/goodsDetail/index"],resolve),
     },
   ]
 })

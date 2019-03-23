@@ -16,7 +16,7 @@
                             <p><span class="item-jg">手机号:{{item.phone}}</span></p>
                             <p><span class="item-jg">地址:{{item.city}}</span></p>
                             <p>
-                                <span @click="sel(index)" item.id><img ref="id" :src="item.img" />设为默认 </span>
+                                <span @click="sel(index)" item.id><img :src="item.img" />设为默认 </span>
                                 <span style="float:right;margin-right:.2rem" @click="del(index)"><img src="../../assets/img/shop_7.png"/>删除 </span>
                                 <span style="float:right" class="edit"><img src="../../assets/img/shop_8.png"/>编辑</span>
                             </p>
