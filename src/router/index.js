@@ -6,7 +6,7 @@ const router=new Router({
   routes: [
     {
       //首页
-      path:'/',
+      path:'/home/index',
       component: resolve=>require(["../view/home/index"],resolve),
     },
     {
@@ -58,6 +58,21 @@ const router=new Router({
       //地址编辑
       path: '/address/edit',
       component: resolve=>require(["../view/address/edit"],resolve),
+    },
+    {
+      //我的位置
+      path: '/myPosition/index',
+      component: resolve=>require(["../view/myPosition/index"],resolve),
+    },
+    {
+      //填写订单
+      path: '/',
+      component: resolve=>require(["../view/writeOrder/index"],resolve),
+    },
+    {
+      //商品
+      path: '/',
+      component: resolve=>require(["../view/writeOrder/index"],resolve),
     },
   ]
 })
