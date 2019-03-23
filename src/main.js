@@ -12,6 +12,11 @@ import moment from 'moment'
 import infiniteScroll from 'vue-infinite-scroll'
 import 'mint-ui/lib/style.css'
 import Vant from 'vant';
+
+import { Toast } from 'vant';
+
+Vue.use(Toast);
+
 import 'vant/lib/index.css';
 Vue.use(Vant);
 promise.polyfill();
