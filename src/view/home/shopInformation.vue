@@ -167,6 +167,7 @@
         },
         methods: {
             onClickLeft() {
+                this.$router.push({path:'/'})
                 Toast('');
             },
         }
