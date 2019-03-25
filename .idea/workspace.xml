@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a3de0b73-05a9-468e-8167-bbec32884ef0" name="Default Changelist" comment="test">
-      <change afterPath="$PROJECT_DIR$/src/view/goodsDetail/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/address/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/address/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/buyCoupon/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/buyCoupon/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/myCoupon/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/myCoupon/index.vue" afterDir="false" />
-    </list>
+    <list default="true" id="a3de0b73-05a9-468e-8167-bbec32884ef0" name="Default Changelist" comment="test" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -24,7 +17,7 @@
         <entry file="file://$PROJECT_DIR$/src/router/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="230">
-              <caret line="19" column="35" lean-forward="true" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+              <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -35,8 +28,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/view/buyCoupon/index.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="118" column="19" selection-start-line="118" selection-start-column="19" selection-end-line="118" selection-end-column="19" />
+            <state relative-caret-position="527">
+              <caret line="125" lean-forward="true" selection-start-line="125" selection-end-line="125" />
               <folding>
                 <element signature="e#533#582#0" expanded="true" />
               </folding>
@@ -69,7 +62,7 @@
         <entry file="file://$PROJECT_DIR$/src/view/address/edit.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="275">
-              <caret line="130" column="14" lean-forward="true" selection-start-line="128" selection-start-column="12" selection-end-line="130" selection-end-column="14" />
+              <caret line="130" column="14" selection-start-line="128" selection-start-column="12" selection-end-line="130" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -78,7 +71,7 @@
         <entry file="file://$PROJECT_DIR$/src/view/order/details.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="611">
-              <caret line="132" column="14" lean-forward="true" selection-start-line="130" selection-start-column="12" selection-end-line="132" selection-end-column="14" />
+              <caret line="132" column="14" selection-start-line="130" selection-start-column="12" selection-end-line="132" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -285,7 +278,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70739000" />
+    <option name="totallyTimeSpent" value="71691000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -505,7 +498,7 @@
     <entry file="file://$PROJECT_DIR$/src/view/order/details.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="611">
-          <caret line="132" column="14" lean-forward="true" selection-start-line="130" selection-start-column="12" selection-end-line="132" selection-end-column="14" />
+          <caret line="132" column="14" selection-start-line="130" selection-start-column="12" selection-end-line="132" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -549,7 +542,7 @@
     <entry file="file://$PROJECT_DIR$/src/view/address/edit.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
-          <caret line="130" column="14" lean-forward="true" selection-start-line="128" selection-start-column="12" selection-end-line="130" selection-end-column="14" />
+          <caret line="130" column="14" selection-start-line="128" selection-start-column="12" selection-end-line="130" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -589,7 +582,7 @@
     <entry file="file://$PROJECT_DIR$/src/router/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
-          <caret line="19" column="35" lean-forward="true" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+          <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
@@ -615,8 +608,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/view/buyCoupon/index.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="118" column="19" selection-start-line="118" selection-start-column="19" selection-end-line="118" selection-end-column="19" />
+        <state relative-caret-position="527">
+          <caret line="125" lean-forward="true" selection-start-line="125" selection-end-line="125" />
           <folding>
             <element signature="e#533#582#0" expanded="true" />
           </folding>
